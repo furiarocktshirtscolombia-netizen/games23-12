@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #58cc02;
+  --color-primary-hover: #46a302;
+  --color-primary-shadow: #58a700;
+  
+  --color-secondary: #1cb0f6;
+  --color-secondary-hover: #148ec6;
+  --color-secondary-shadow: #1899d6;
+
+  --color-accent: #ff4b4b;
+  --color-accent-hover: #e53935;
+  --color-accent-shadow: #d32f2f;
+
+  --color-warning: #ffc800;
+  --color-warning-hover: #e5b400;
+  --color-warning-shadow: #d3a600;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+
+  --color-muted: #e5e7eb;
+  --color-muted-foreground: #6b7280;
+}
+
+@layer base {
+  :root {
+    --background: #f3f4f6;
+    --foreground: #1f2937;
+    --card: #ffffff;
+    --card-foreground: #1f2937;
+    --border: #e5e7eb;
+  }
+
+  .dark {
+    --background: #111827;
+    --foreground: #f9fafb;
+    --card: #1f2937;
+    --card-foreground: #f9fafb;
+    --border: #374151;
+    
+    --color-primary: #58cc02;
+    --color-primary-shadow: #46a302;
+    
+    --color-secondary: #1cb0f6;
+    --color-secondary-shadow: #148ec6;
+    
+    --color-accent: #ff4b4b;
+    --color-accent-shadow: #d32f2f;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+/* Custom Duolingo-style Button Classes */
+@layer components {
+  .btn-game {
+    @apply relative inline-flex items-center justify-center font-display font-bold uppercase tracking-wider rounded-2xl transition-all duration-150 active:translate-y-1 active:shadow-none select-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white shadow-[0_4px_0_var(--color-primary-shadow)] hover:bg-[var(--color-primary-hover)];
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white shadow-[0_4px_0_var(--color-secondary-shadow)] hover:bg-[var(--color-secondary-hover)];
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white shadow-[0_4px_0_var(--color-accent-shadow)] hover:bg-[var(--color-accent-hover)];
+  }
+
+  .card-game {
+    @apply bg-card text-card-foreground rounded-3xl border-2 border-border overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)];
+  }
+}
+
+/* Animated Background */
+.bg-animated {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

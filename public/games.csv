@@ -1,0 +1,7 @@
+id,name,level,category,description,link,thumbnail,isNew,isFeatured
+1,Introducing yourself A.I. Assistant,A1,Introducing Yourself,Ai basic assistant to practice yourself presentation by speaking,https://teacher-diego-village.vercel.app/,https://picsum.photos/seed/ai/400/300,true,true
+2,NUMCATCH,A1,Numbers,Game to learn numbers in english,https://numcatch.vercel.app/,https://picsum.photos/seed/numbers/400/300,false,true
+3,Spellit,A1,Alphabet,Game to learn alphabet & Vocabulary,https://spellit-ten.vercel.app/,https://picsum.photos/seed/alphabet/400/300,false,false
+4,Pronounrush,A1,Subject Pronouns,Game to learn Subject Pronouns,https://pronoun-rush.vercel.app/,https://picsum.photos/seed/pronouns/400/300,true,false
+5,To Be Galaxy,A1,Verb to be,Game to learn verb to be in present,https://to-be-galaxy.vercel.app/,https://picsum.photos/seed/galaxy/400/300,false,true
+6,Teacher Diego Village,A1,Basic English,BASIC ENGLISH,https://teacher-diego-village.vercel.app/,https://picsum.photos/seed/village/400/300,true,true
