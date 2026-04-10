@@ -75,6 +75,33 @@ export default function App() {
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '0s' }}></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         
+        {/* Elegant Geometric Figures */}
+        <div className="absolute top-20 left-10 opacity-20 animate-[spin_15s_linear_infinite]">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="80" height="80" rx="20" stroke="currentColor" strokeWidth="4" className="text-primary"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 left-1/4 opacity-20 animate-[bounce_5s_infinite]">
+          <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="4" className="text-secondary"/>
+          </svg>
+        </div>
+        <div className="absolute top-40 right-1/4 opacity-20 animate-pulse">
+          <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L90 90 L10 90 Z" stroke="currentColor" strokeWidth="4" className="text-accent"/>
+          </svg>
+        </div>
+        <div className="absolute top-10 right-10 opacity-20 animate-float" style={{ animationDelay: '1s' }}>
+          <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 50 Q 30 20 50 50 T 90 50" stroke="currentColor" strokeWidth="4" className="text-warning" fill="none"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-10 right-20 opacity-10 animate-[spin_20s_linear_infinite_reverse]">
+          <svg width="150" height="150" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" stroke="currentColor" strokeWidth="2" className="text-foreground"/>
+          </svg>
+        </div>
+
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left">
             <motion.div

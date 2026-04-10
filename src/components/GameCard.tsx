@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Play, Star, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useGameSounds } from '../hooks/useGameSounds';
+import { GameThumbnail } from './GameThumbnails';
 
 interface GameCardProps {
   game: Game;
@@ -44,15 +45,14 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onPlay }) => {
       </div>
 
       {/* Thumbnail */}
-      <div className="relative h-48 w-full overflow-hidden border-b-2 border-border">
-        <motion.img
-          whileHover={{ scale: 1.1 }}
+      <div className="relative h-48 w-full overflow-hidden border-b-2 border-border bg-muted flex items-center justify-center">
+        <motion.div 
+          className="w-full h-full"
+          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
-          src={game.thumbnail}
-          alt={game.name}
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
+        >
+          <GameThumbnail id={game.id} name={game.name} />
+        </motion.div>
         {/* Overlay on hover */}
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
